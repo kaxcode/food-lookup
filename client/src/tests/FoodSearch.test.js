@@ -1,5 +1,4 @@
-// We populate this file in the chapter "Unit Testing"
-/* eslint-disable no-unused-vars */
+
 import { shallow } from 'enzyme';
 import React from 'react';
 import FoodSearch from '../FoodSearch';
@@ -12,13 +11,11 @@ describe('FoodSearch', () => {
   });
 
   it('should not display the remove icon', () => {
-    expect(wrapper.find('.remove.icon').length)
-      .toBe(0);
+    expect(wrapper.find('.remove.icon').length).toBe(0);
   });
 
   it('should display zero rows', () => {
-    expect(wrapper.find('tbody tr').length)
-      .toEqual(0);
+    expect(wrapper.find('tbody tr').length).toEqual(0);
   });
 
   describe('user populates search field', () => {
@@ -32,13 +29,11 @@ describe('FoodSearch', () => {
     });
 
     it('should update state property `searchValue`', () => {
-      expect(wrapper.state().searchValue)
-        .toEqual(value);
+      expect(wrapper.state().searchValue).toEqual(value);
     });
 
     it('should display the remove icon', () => {
-      expect(wrapper.find('remove.icon').length)
-        .toBe(1);
+      expect(wrapper.find('.remove.icon').length).toBe(1);
     });
 
     describe('and API returns results', () => {
