@@ -16,6 +16,7 @@ describe('FoodSearch', () => {
 
   afterEach(() => {
     Client.search.mockClear();
+    onFoodCLick.mockClear();
   });
 
   it('should not display the remove icon', () => {
@@ -92,7 +93,8 @@ describe('FoodSearch', () => {
 
       describe('then user clicks food item', () => {
         beforeEach(() => {
-          // ... simulate user clicking food item
+          const foodRow = wrapper.find('tbody tr').first();
+          foodRow.simulate('click');
         });
 
         // ... specs
