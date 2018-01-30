@@ -17,6 +17,11 @@ describe('FoodSearch', () => {
         .toBe(0);
     });
 
+    it('should display zero rows', () => {
+      expect(wrapper.find('tbody tr').length)
+        .toEqual(0);
+    });
+
     describe('and API returns results', () => {
       beforeEach(() => {
         // ... simulate API returning results
