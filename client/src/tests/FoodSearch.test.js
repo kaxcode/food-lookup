@@ -67,7 +67,10 @@ describe('FoodSearch', () => {
       ];
 
       beforeEach(() => {
-        // ... simulate API returning results
+        const invocationArgs = Client.search.mock.calls[0];
+        const cb = invocationArgs[1];
+        cb(foods);
+        wrapper.update();
       });
 
       // ... specs
