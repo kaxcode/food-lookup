@@ -5,11 +5,11 @@ import React from 'react';
 import FoodSearch from '../FoodSearch';
 
 describe('FoodSearch', () => {
-  // ... initial state specs
+  let wrapper;
 
   describe('user populates search field', () => {
     beforeEach(() => {
-      // ... simulate user typing "brocc" in input
+      wrapper = shallow(<FoodSearch />);
     });
 
     // ... specs
