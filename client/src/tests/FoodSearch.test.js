@@ -81,6 +81,14 @@ describe('FoodSearch', () => {
         expect(wrapper.find('tbody tr').length).toEqual(2);
       });
 
+      it('should render the desciption of first food', () => {
+        expect(wrapper.html()).toContain(foods[0].description);
+      });
+
+      it('should render the desciption of second food', () => {
+        expect(wrapper.html()).toContain(foods[1].description);
+      });
+
       describe('then user clicks food item', () => {
         beforeEach(() => {
           // ... simulate user clicking food item
