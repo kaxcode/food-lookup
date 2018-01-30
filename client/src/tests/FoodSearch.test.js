@@ -8,9 +8,10 @@ jest.mock('../Client');
 
 describe('FoodSearch', () => {
   let wrapper;
+  const onFoodCLick = jest.find();
 
   beforeEach(() => {
-    wrapper = shallow(<FoodSearch />);
+    wrapper = shallow(<FoodSearch onFoodClick={onFoodCLick}/>);
   });
 
   afterEach(() => {
