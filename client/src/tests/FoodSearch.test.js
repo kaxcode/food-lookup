@@ -12,7 +12,10 @@ describe('FoodSearch', () => {
       wrapper = shallow(<FoodSearch />);
     });
 
-    // ... specs
+    it('should not display the remove icon', () => {
+      expect(wrapper.find('.remove.icon').length)
+        .toBe(0);
+    });
 
     describe('and API returns results', () => {
       beforeEach(() => {
